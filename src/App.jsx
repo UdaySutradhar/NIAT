@@ -8,7 +8,9 @@ export default function App() {
 
   const [studentData, setStudentData] = useState({
     name: '',
+    board: 'CBSE',
     stream: 'Science (PCM)',
+    percentage: '',
     interest: 'AI & Full-Stack Development',
     careerGoal: 'High-paying software engineer at a top product company'
   });
@@ -89,7 +91,7 @@ export default function App() {
         roadmapTitle: `Verified 4-Year NIAT Bridge for ${studentData.name}`,
         aiAlignmentScore: "94.8% Family Consensus Match",
         jobSecurityAnalysis: `Addressed parent concern ('${parentData.primaryFear}'): NIAT’s work-integrated 4-year B.Tech + guaranteed practical internships eliminates traditional obsolescence risk.`,
-        studentPathway: `Mapped student interest ('${studentData.interest}') directly into an advanced AI & Full-Stack engineering curriculum with zero theory padding.`,
+        studentPathway: `Mapped student interest ('${studentData.interest}') under ${studentData.board} (${studentData.stream}) directly into an advanced AI & Full-Stack engineering curriculum.`,
         financialRoi: "Est. 3.2x faster payback period compared to standard Tier-3 university degrees."
       };
 
@@ -183,16 +185,49 @@ export default function App() {
                     style={{ width: '100%', backgroundColor: '#020617', border: '1px solid #1e293b', borderRadius: '8px', padding: '12px', fontSize: '14px', color: '#fff', outline: 'none' }}
                   />
                 </div>
+
+                {/* Board & Stream Dropdowns Side by Side */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '12px', color: '#94a3b8', marginBottom: '6px' }}>Education Board</label>
+                    <select
+                      value={studentData.board}
+                      onChange={(e) => setStudentData({...studentData, board: e.target.value})}
+                      style={{ width: '100%', backgroundColor: '#020617', border: '1px solid #1e293b', borderRadius: '8px', padding: '12px', fontSize: '14px', color: '#fff', outline: 'none', cursor: 'pointer' }}
+                    >
+                      <option value="CBSE">CBSE</option>
+                      <option value="ICSE / ISC">ICSE / ISC</option>
+                      <option value="State Board">State Board</option>
+                      <option value="IB / Cambridge">IB / Cambridge</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', fontSize: '12px', color: '#94a3b8', marginBottom: '6px' }}>Academic Stream</label>
+                    <select
+                      value={studentData.stream}
+                      onChange={(e) => setStudentData({...studentData, stream: e.target.value})}
+                      style={{ width: '100%', backgroundColor: '#020617', border: '1px solid #1e293b', borderRadius: '8px', padding: '12px', fontSize: '14px', color: '#fff', outline: 'none', cursor: 'pointer' }}
+                    >
+                      <option value="Science (PCM)">Science (PCM)</option>
+                      <option value="Science (PCB)">Science (PCB)</option>
+                      <option value="Commerce (Maths/Econ)">Commerce (Maths/Econ)</option>
+                      <option value="Arts / Humanities">Arts / Humanities</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div>
-                  <label style={{ display: 'block', fontSize: '12px', color: '#94a3b8', marginBottom: '6px' }}>Board Stream & Percentage</label>
+                  <label style={{ display: 'block', fontSize: '12px', color: '#94a3b8', marginBottom: '6px' }}>Percentage / Grade Score</label>
                   <input 
                     type="text" 
-                    placeholder="e.g., Science (PCM - 90%)"
-                    value={studentData.stream}
-                    onChange={(e) => setStudentData({...studentData, stream: e.target.value})}
+                    placeholder="e.g., 88% or 9.2 CGPA"
+                    value={studentData.percentage}
+                    onChange={(e) => setStudentData({...studentData, percentage: e.target.value})}
                     style={{ width: '100%', backgroundColor: '#020617', border: '1px solid #1e293b', borderRadius: '8px', padding: '12px', fontSize: '14px', color: '#fff', outline: 'none' }}
                   />
                 </div>
+
                 <div>
                   <label style={{ display: 'block', fontSize: '12px', color: '#94a3b8', marginBottom: '6px' }}>Tech Interest / Career Goal</label>
                   <select
