@@ -46,6 +46,30 @@ export default function App() {
       parentTab: "2. తల్లిదండ్రుల ఆందోళన",
       generateBtn: "కస్టమ్ కుటుంబ రోడ్‌మ్యాప్ రూపొందించండి",
       processing: "కుటుంబ రోడ్‌మ్యాప్ రూపొందించబడుతోంది...",
+    },
+    ta: {
+      title: "NIAT பெற்றோர்-மாணவர் தொழில் & AI-தடுப்பு வழிகாட்டி",
+      subtitle: "மாணவர்களின் லட்சியங்களை பெற்றோர்களின் பாதுகாப்போடு இணைக்கும் தளம்.",
+      studentTab: "1. மாணவர் விவரம்",
+      parentTab: "2. பெற்றோர் கவலைகள்",
+      generateBtn: "தனிப்பயன் குடும்ப தொழில்நுட்ப வழிகாட்டியை உருவாக்குங்கள்",
+      processing: "குடும்ப வழிகாட்டி தயாரிக்கப்படுகிறது...",
+    },
+    kn: {
+      title: "NIAT ಪೋಷಕ-ವಿದ್ಯಾರ್ಥಿ ವೃತ್ತಿ & AI-ಪ್ರೂಫಿಂಗ್ ಮ್ಯಾಚ್‌ಮೇಕರ್",
+      subtitle: "ವಿದ್ಯಾರ್ಥಿಯ ಆಕಾಂಕ್ಷೆಗಳನ್ನು ಪೋಷಕರ ಭದ್ರತೆಯೊಂದಿಗೆ ಜೋಡಿಸುವ ವೇದಿಕೆ.",
+      studentTab: "1. ವಿದ್ಯಾರ್ಥಿ ವಿವರ",
+      parentTab: "2. ಪೋಷಕರ ಆತಂಕ",
+      generateBtn: "ಕಸ್ಟಮ್ ಕುಟುಂಬ ಟೆಕ್ ರೋಡ್‌ಮ್ಯಾಪ್ ರಚಿಸಿ",
+      processing: "ಕುಟುಂಬ ಜೋಡಣೆ ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ...",
+    },
+    ml: {
+      title: "NIAT മാതാപിതാക്കൾ-വിദ്യാർത്ഥി കരിയർ മാച്ച്മേക്കർ",
+      subtitle: "വിദ്യാർത്ഥിയുടെ ലക്ഷ്യങ്ങളെ മാതാപിതാക്കളുടെ സുരക്ഷയുമായി ബന്ധിപ്പിക്കുന്ന പ്ലാറ്റ്‌ഫോം.",
+      studentTab: "1. വിദ്യാർത്ഥി പ്രൊഫൈൽ",
+      parentTab: "2. മാതാപിതാക്കളുടെ ആശങ്കകൾ",
+      generateBtn: "കസ്റ്റം ഫാമിലി ടെക് റോഡ്മാപ്പ് തയ്യാറാക്കുക",
+      processing: "കുടുംബ ക്രമീകരണം തയ്യാറാക്കുന്നു...",
     }
   };
 
@@ -95,7 +119,7 @@ export default function App() {
             <div style={{ color: '#818cf8', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', marginBottom: '4px' }}>
               ✨ NxtWave NIAT Platform
             </div>
-            <h1 style={{ fontSize: '20px', fontWeight: 'bold', margin: 0 }}>{currText.title}</h1>
+            <h1 style={{ fontSize: '18px', fontWeight: 'bold', margin: 0 }}>{currText.title}</h1>
             <p style={{ color: '#94a3b8', fontSize: '13px', margin: '4px 0 0 0' }}>{currText.subtitle}</p>
           </div>
           
@@ -109,6 +133,9 @@ export default function App() {
               <option value="en" style={{ background: '#0f172a' }}>English</option>
               <option value="hi" style={{ background: '#0f172a' }}>हिंदी (Hindi)</option>
               <option value="te" style={{ background: '#0f172a' }}>తెలుగు (Telugu)</option>
+              <option value="ta" style={{ background: '#0f172a' }}>தமிழ் (Tamil)</option>
+              <option value="kn" style={{ background: '#0f172a' }}>ಕನ್ನಡ (Kannada)</option>
+              <option value="ml" style={{ background: '#0f172a' }}>മലയാളം (Malayalam)</option>
             </select>
           </div>
         </div>
