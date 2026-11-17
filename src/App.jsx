@@ -198,7 +198,6 @@ export default function App() {
                       <option value="CBSE">CBSE</option>
                       <option value="ICSE / ISC">ICSE / ISC</option>
                       <option value="State Board">State Board</option>
-                      <option value="IB / Cambridge">IB / Cambridge</option>
                     </select>
                   </div>
 
@@ -210,9 +209,7 @@ export default function App() {
                       style={{ width: '100%', backgroundColor: '#020617', border: '1px solid #1e293b', borderRadius: '8px', padding: '12px', fontSize: '14px', color: '#fff', outline: 'none', cursor: 'pointer' }}
                     >
                       <option value="Science (PCM)">Science (PCM)</option>
-                      <option value="Science (PCB)">Science (PCB)</option>
-                      <option value="Commerce (Maths/Econ)">Commerce (Maths/Econ)</option>
-                      <option value="Arts / Humanities">Arts / Humanities</option>
+                      <option value="Science (PCMB)">Science (PCMB)</option>
                     </select>
                   </div>
                 </div>
